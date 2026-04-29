@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayniz Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <!-- Hamburger Button (mobile only) -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
+            <a href="" class="active">Home</a>
+            <a href="">About</a>
+            <a href="">Portofolio</a>
+            <a href="">Services</a>
+            <a href="">Contact</a>
+        </nav>
+
+        <div class="logo">rayNEY</div>
+    </header>
+
+    <div class="carousel">
+        <div class="list">
+            <div class="item" style="background-image: url(image/sawarna.jpg);">
+                <div class="content">
+                    <div class="title">JOURNEY</div>
+                    <div class="name">Sawarna</div>
+                    <div class="time">22 April 2025</div>
+                    <div class="des">Di tepi pantai, suara ombak menjadi elemen utama. Deburan ombak yang terus-menerus terdengar justru menciptakan efek relaksasi, seolah menjadi “musik alam” yang menemani malam. Angin laut yang berhembus pelan membawa udara segar, meski terasa sedikit dingin.</div>
+                    <div class="btn">
+                        <button>See More</button>
+                        <button>Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(image/gunung_luhurr.jpeg);">
+                <div class="content">
+                    <div class="title">JOURNEY</div>
+                    <div class="name">Gunung Luhur</div>
+                    <div class="time">10 Desember 2025</div>
+                    <div class="des">Perjalanan ke Gunung Luhur Sukamakmur bukan hanya soal destinasi, tapi juga pengalaman dari jalan yang menantang, udara yang segar, hingga pemandangan yang memanjakan mata. Cocok untuk kamu yang ingin liburan singkat tapi tetap berkesan.</div>
+                    <div class="btn">
+                        <button>See More</button>
+                        <button>Follow</button>
+                    </div>
+                </div>
+            </div>            
+            <div class="item" style="background-image: url(image/gunung_gede.png);">
+                <div class="content">
+                    <div class="title">JOURNEY</div>
+                    <div class="name">Gunung Gede</div>
+                    <div class="time">6 April 2026</div>
+                    <div class="des">Perjalanan menuju Gunung Gede adalah pengalaman pendakian yang penuh tantangan sekaligus keindahan alam yang luar biasa. Gunung ini berada di kawasan Taman Nasional Gunung Gede Pangrango, mencakup wilayah Bogor, Cianjur, dan Sukabumi.</div>
+                    <div class="btn">
+                        <button>See More</button>
+                        <button>Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(image/curug_ciampea.jpg);">
+                <div class="content">
+                    <div class="title">JOURNEY</div>
+                    <div class="name">Curug Ciampea</div>
+                    <div class="time">4 Mei 2023</div>
+                    <div class="des">Journey ke Curug Ciampea memberikan pengalaman yang sederhana namun berkesan, perpaduan antara perjalanan ringan, keindahan alam, dan ketenangan yang sulit ditemukan di tengah kesibukan sehari-hari.</div>
+                    <div class="btn">
+                        <button>See More</button>
+                        <button>Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(image/gunung_salak.jpg);">
+                <div class="content">
+                    <div class="title">JOURNEY</div>
+                    <div class="name">Gunung Salak</div>
+                    <div class="time">28 Agustus 2025</div>
+                    <div class="des">Perjalanan menuju Gunung Salak pada 28 Agustus 2025 menjadi pengalaman yang cukup menantang sekaligus berkesan, terutama karena kondisi alam yang sedikit berbeda dari biasanya.</div>
+                    <div class="btn">
+                        <button>See More</button>
+                        <button>Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button class="prev"><</button>
+            <button class="next">></button>
+        </div>
+
+        <div class="timeRunning"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            mainNav.classList.toggle('open');
+        });
+
+        // Tutup menu saat klik salah satu link
+        mainNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                mainNav.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>
